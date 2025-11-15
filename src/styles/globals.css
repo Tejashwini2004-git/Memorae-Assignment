@@ -1,0 +1,38 @@
+/* Tailwind v4 usage: import tailwindcss directly */
+@import "tailwindcss";
+
+:root {
+  --primary: #4f46e5;
+  --accent: #6366f1;
+  --muted: #6b7280;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+}
+
+/* small helpers */
+.btn-primary {
+  @apply inline-block px-5 py-2 rounded-full bg-[var(--primary)] text-white font-semibold shadow-lg;
+}
+.card {
+  @apply p-6 rounded-2xl bg-white shadow;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* Chat bubble */
+.chat-in {
+  @apply bg-white p-3 rounded-2xl max-w-[72%] shadow;
+}
+.chat-out {
+  @apply bg-[var(--primary)] p-3 rounded-2xl max-w-[72%] text-white shadow;
+}
